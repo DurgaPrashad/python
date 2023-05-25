@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dropiton</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Kumbh Sans', sans-serif; scroll-behavior: smooth; }
+    .navbar { background: #000; height: 80px; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; position: sticky; top: 0; z-index: 999; }
+    .navbar__container { display: flex; justify-content: space-between; height: 80px; z-index: 1; width: 100%; max-width: 1300px; margin: 0 auto; padding: 0 50px; }
+    #navbar__logo { background: #fff; background-image: linear-gradient(to top, #fff 0%, #35f606 100%); background-size: 100%; -webkit-background-clip: text; -moz-background-clip: text; -webkit-text-fill-color: transparent; -moz-text-fill-color: transparent; display: flex; align-items: center; cursor: pointer; text-decoration: none; font-size: 2rem; }
+    .navbar__menu { display: flex; align-items: center; list-style: none; }
+    .navbar__item { height: 80px; }
+    .navbar__links { color: #fff; display: flex; align-items: center; justify-content: center; width: 125px; text-decoration: none; height: 100%; transition: all 0.3s ease; }
+    .navbar__btn { display: flex; justify-content: center; align-items: center; padding: 0 1rem; width: 100%; }
+    .button { display: flex; justify-content: center; align-items: center; text-decoration: none; padding: 10px 20px; height: 100%; width: 100%; border: none; outline: none; border-radius: 4px; background: #833ab4; background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); color: #fff; transition: all 0.3s ease; }
+    .navbar__links:hover { color: #9518fc; transition: all 0.3s ease; }
+    @media screen and (max-width: 960px) {
+      .navbar__container { display: flex; justify-content: space-between; height: 80px; z-index: 1; width: 100%; max-width: 1300px; padding: 0; }
+      .navbar__menu { display: grid; grid-template-columns: auto; margin: 0; width: 100%; position: absolute; top: -1000px; opacity: 1; transition: all 0.5s ease; z-index: -1; }
+      .navbar__menu.active { background: #131313; top: 100%; opacity: 1; transition: all 0.5s ease; z-index: 99; height: 60vh; font-size: 1.6rem; }
+    
+
+
+
+
+@media screen and (max-width: 960px) {
+  .navbar__container { display: flex; justify-content: space-between; height: 80px; z-index: 1; width: 100%; max-width: 1300px; padding: 0; }
+  .navbar__menu { display: grid; grid-template-columns: auto; margin: 0; width: 100%; position: absolute; top: -1000px; opacity: 1; transition: all 0.5s ease; z-index: -1; }
+  .navbar__menu.active { background: #131313; top: 100%; opacity: 1; transition: all 0.5s ease; z-index: 99; height: 60vh; font-size: 1.6rem; }
+  #mobile__menu { display: flex; justify-content: flex-end; align-items: center; }
+  .menu__icon { display: none; }
+  .navbar__toggle { color: #fff; cursor: pointer; font-size: 2rem; }
+  .navbar__items { display: flex; justify-content: center; align-items: center; }
+  .navbar__item { height: 80px; }
+  .navbar__links { color: #fff; display: flex; align-items: center; justify-content: center; width: 125px; text-decoration: none; height: 100%; transition: all 0.3s ease; }
+  .navbar__links:hover { color: #9518fc; transition: all 0.3s ease; }
+  .navbar__btn { display: flex; justify-content: center; align-items: center; padding: 0 1rem; width: 100%; }
+  .button { display: flex; justify-content: center; align-items: center; text-decoration: none; padding: 10px 20px; height: 100%; width: 100%; border: none; outline: none; border-radius: 4px; background: #833ab4; background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); color: #fff; transition: all 0.3s ease; }
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="#" id="navbar__logo">Logo</a>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="#" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__links">About</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__links">Services</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__links">Contact</a>
+        </li>
+        <li class="navbar__btn">
+          <a href="#" class="button">Sign Up</a>
+        </li>
+      </ul>
+      <div id="mobile__menu">
+        <i class="fas fa-bars menu__icon"></i>
+      </div>
+    </div>
+  </nav>
+
+   <section class="hero" style="background-image: url('background-image.jpg');">
+    <h1><a href="#home">Drop It On</a></h1>
+    <div style="display: flex; align-items: center; max-width: 800px;">
+      <img src="food1.jpg" alt="food image" style="width: 400px; height: 300px; margin-right: 10px;">
+      <h3 style="color: black; font-size: 1.5em;">Order food online and have it delivered to your doorstep. Our platform connects you with a wide range of restaurants and delivery professionals who can provide delicious meals right at your convenience.</h3>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h1><a href="#about">Connecting People</a></h1>
+      <div class="flex-container">
+        <div class="flex-item">
+          <h2 style="color: black;">Enjoy group collaboration solutions: Our platform allows you to collaborate with others and make group orders, making it easy to coordinate food delivery with friends, family, or colleagues.</h2>
+        </div>
+        <img src="food2.jpg" alt="food image" style="max-width: 25%; margin-left: 10px;">
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="food3.jpg" alt="food image" width="300" height="200" style="float: left; margin-right: 20px;">
+      <h2 style="color: black;">Experience a flawless and efficient food delivery process. Our team of professional delivery drivers ensures your orders are promptly picked up and safely delivered to your location.</h2>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h1>About Us</h1>
+    <p>.</p>
+    <!-- Add more content here -->
+  </section>
+
+  <section id="services" class="section">
+    <h1>Our Services</h1>
+    <ul>
+      <li>Fast and reliable food delivery</li>
+      <li>Wide selection of restaurants and cuisines</li>
+      <li>Group ordering and collaboration</li>
+      <li>Secure payment options</li>
+      <!-- Add more services here -->
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h1>Contact Us</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Drop It On. All rights reserved.</p>
+  </footer>
+</body>
+</html>
